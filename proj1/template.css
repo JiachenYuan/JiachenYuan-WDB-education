@@ -188,15 +188,10 @@ h1 {
     color: inherit;
 }
 
-/* .nav-button a{
+.nav-button a{
     background-color: #2C2C2C;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 0px;
-    color: white;
-} */
+    
+}
 
 .nav-button:hover {
     cursor:pointer;
