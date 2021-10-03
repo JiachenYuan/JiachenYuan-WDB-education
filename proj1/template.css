@@ -190,7 +190,7 @@ h1 {
 
 .nav-button a{
     background-color: #2C2C2C;
-    
+    color: inherit;
 }
 
 .nav-button:hover {
