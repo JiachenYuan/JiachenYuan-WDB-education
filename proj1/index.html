@@ -1,0 +1,126 @@
+<!--
+    Please note that this HTML template is a starting point!
+    It is absolutely not comprehensive, and you will almost surely have to add more.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./template.css">
+    <script src="./myscripts.js"></script>
+    <title>Jiachen's Homepage</title>
+</head>
+<body>
+    <!-- First page -->
+    <div class="splash-page">
+        <div class="logo" id="logo" style="position: absolute; left: 0%; background-color: #F5F3F1;">
+            <img src="./image/doge.jpg" alt="My Logo" width="100px" height="100px">
+        </div>
+        <div class="splash-decoration-block">
+            <div class="portrait">
+                <img class="portrait-img" src="./image/portrait.jpg" alt="My ugly face :)" width="350px" height="auto"> 
+            </div>
+            <div class="navbar">
+                <div class="nav">
+                    <div class="nav-button">
+                        <a href="#logo">About</a>
+                    </div>
+                    <div class="nav-button"> <a href="#experiences">Experiences</a></div>
+                    <div class="nav-button"> <a href="./files/Jiachen Yuan Resume.pdf">Resume</a></div>
+                    <div class="nav-button"> <a href="https://github.com/JiachenYuan/" target="_blank">GitHub</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="headline">
+            <div><h2>Hey~! This is</h2></div>
+            <div><h1>🥤 Jiachen Yuan 😎</h1></div>
+            <div><h3 style="position: relative; left: 40%;">CS major @ UC Berkeley</h3></div>
+            <div><p>I am majoring in <strong>Computer Science</strong>, and I'm a junior right now.<p></p></div>
+            <div><p>Though not 100% sure, but I think going down the Data Science and ML track. </p></div>
+            <div><p>CS has given me a huge power to be able to help others and solve real-world problems.</p></div>
+            <br>
+            <div class="contactInfo" onclick="QR_pop_up()">
+                <p>Contect Me</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-QRcode">
+        <div class="contact-X"><img src="./image/X.jpg" onclick="close_contact_QRcode()"></div>
+        <div class="QRcodes">
+            <div class="QRpic"><img src="./image/wechatQR.PNG" alt=""></div>
+            <div class="QRpic"><img src="./image/linkedinQR.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <!-- Second page -->
+    <div class="experiences" id="experiences">
+        <div class="portfolio">
+            <div class="portfolio-block">
+                <div class="proj-list-item">
+                    <h2>1. Binding Code Generator</h2>
+                </div>
+                <div class="proj-list-item">
+                    <h2>2. Log Information Visualizer</h2>
+                </div>
+                <div class="proj-list-item">
+                    <h2>3. Autonomous Decision-Making Pacman</h2>
+                </div>
+            </div>
+
+            <div class="portfolio-block">
+                <div class="proj-image">
+                    <img src="./image/log-visualizer.jpg" alt="" >
+                </div>
+                <div class="proj-name">
+                    <p>2. Log Information Visualizer</p>
+                </div>
+                <div class="proj-description">
+                    <p>This was an intern project. I created a bar chart visualizer using Open-source library Apache ECharts 
+                        for terabyte-sized log information for 
+                        quick error detection and information filtering 
+                        involving both front end and back-end realization. The small project used Python Flask as the back-end.
+                        It supports incremental update of data onto the plot.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-block">
+                <div class="proj-image">
+                    <img src="./image/python-C++.jpg" alt="" >
+                </div>
+                <div class="proj-name">
+                    <p>1. Binding Code Generator</p>
+                </div>
+                <div class="proj-description">
+                    <p>We value the efficiency of C++, but we also want Python's elegance and convenience 
+                        in a testing situation. Without writing test cases in C++ and recompiling, using only Python would be great.
+                        During my last internship, I found a way to "build a bridge" between the two. I then built an automatic code generator tool for exposing C++ types and 
+                        libraries for Python usage.
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-block">
+                <div class="proj-image">
+                    <img src="./image/Pacman.jpg" alt="" >
+                </div>
+                <div class="proj-name">
+                    <p>3. Autonomous Pacman</p>
+                </div>
+                <div class="proj-description">
+                    <p> I have to say this project is the most interesting part of CS188! We established autonomous Pac-Man and Ghosts agents to locate themselves 
+                        and decide the best routes to obtain their own goals with the use of 
+                        AI searching algorithm, logical inference, and deep learning 
+                        in the simulated Pac-Man world.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
