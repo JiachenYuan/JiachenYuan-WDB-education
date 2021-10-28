@@ -45,7 +45,7 @@ const item = new Scheme({
 
 const APOD = mongoose.model("APOD", item);
 
-router.put('/liked', function(req, res) {
+router.post('/add', function(req, res) {
     
     const toAdd = new APOD({
       image_url: req.body.photo_address,
@@ -64,16 +64,16 @@ router.put('/liked', function(req, res) {
       }
     })
 
-})
+});
 
-router.put('/unliked', function(req, res) {
+router.post('/delete', function(req, res) {
     
   const toAdd = new APOD({
     image_url: req.body.photo_address,
     date: req.body.photo_date
   })
 
-  APOD.deleteMany({image_url: req.body.photo_address, date: req.body.photo_date}, 
+  APOD.deleteMany({date: req.body.photo_date}, 
     (error, apod)=> {
       if (error) {
         res.json({status: "failure"})
@@ -86,14 +86,14 @@ router.put('/unliked', function(req, res) {
 })
 
 
-router.get('/next', function(req, res) {
-    axios.get('https://api.nasa.gov/planetary/apod?date=2021-10-25&api_key=grnIxnrHQy02ckDar4A9URiod1bYcb65cBiaBSHu')
-    .then(json_format => {
-      // let url = json_format.data.url;
-      // let date = json_format.data.date;
-      res.json(json_format.data);
-    })
-});
+// router.get('/next', function(req, res) {
+//     axios.get('https://api.nasa.gov/planetary/apod?date=2021-10-25&api_key=grnIxnrHQy02ckDar4A9URiod1bYcb65cBiaBSHu')
+//     .then(json_format => {
+//       // let url = json_format.data.url;
+//       // let date = json_format.data.date;
+//       res.json(json_format.data);
+//     })
+// });
 
 
 
